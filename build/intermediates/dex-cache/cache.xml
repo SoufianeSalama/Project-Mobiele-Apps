@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43ab9b69758a0f22706629223c367e9bd478e1a8">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-safetynet-9.6.0_dd7429334bb49f335e3a4a6470872912a838e22a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\internal_impl-24.0.0_33c8bc34df17c335c934701a65f4663d49ab5d6d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6079f942bb34faee179b4c46396a26fbbfc43e5d">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-plus-9.6.0_bbc88a3545ac14047ab5537084617b0b7995e471.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="614b2ffd04818e865e1c02cc149c6b92e518e862">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-9.6.0_83a2ef72795206edf330c67c2e32028c10cde3e7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6d16df2955bbd154b36819386cfd2e3b7f7cae5b">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gass-9.6.0_a5fd77712985047d720a474cfb3b58f26de33a9d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a5da6fc5a6f39aee309ae6ae670e1b942759dc51">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wearable-9.6.0_b650db9f5aaa8b9a46fc822403e6f533c9605290.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_b63c16b031b616f2578aad24fb164bc90472c2a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="415336382149f2a79eb80599e340e188f6724d6d">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tagmanager-9.6.0_6c6adc9fe5826e9a8d58e49bfe6ded631d936d79.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7357a05eea2a049c33488c7e8c6f887b3483d4b8">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-9.6.0_87ec47b7aecb16083aeb1e261cb9d7255c3b5c1e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-instantapps\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5fef4ad8c5b2519596b80a241d56b69dffcd6845">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-instantapps-9.6.0_3da32445fa76b1b793b7d7e580908acc410ccc5e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-awareness\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="26cd46f7bc6e1f269062b61269317a29329a9a7b">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-awareness-9.6.0_1f2b8b5402a7dd412903b8a9a2a53c34a7c471fe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="12e94600a0ea3beae6ea0f1d18a0768ded5bc1ae">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-iid-9.6.0_1ee7ce4985e3ca41e6f28f0d66ddcaaf996fcf3d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ce5313bb5ccc0c1e10c995e4efb2f2b08c848b39">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-9.6.0_05e2464963cb91bedde3214f06e6050ba7531e00.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f4540ad2a6e3741694e9332f0c20607c780fae6c">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wallet-9.6.0_633e0cf2635c18ca9112cb03a48c92c0eab4555d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_966205d48375b5df662ce6e68e02f7d9c55bc158.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1f4bb2577a30d0b3268fed038ed59230709ad593">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-9.6.0_e00ad9b86d43d43415991a66f7e26a5c5fb39fb2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_f1ad077f330583f1ebb818065f923bf06f0ae614.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_28976c4d2b17dd322168795bc719ff0b29dc2d35.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="eb96a230c7b55d545fbdee45157a5a75b2b26284">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-clearcut-9.6.0_fe8669a715bfe650d212b3cc482d22950ff8adc9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d57767271a9c140da143ec0db9a0673b6d96eccb">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-9.6.0_ea6aba6dee843430b6cfa642852a73fddeefcfbe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_a4b20ee7df692f6fd97be2e17bcdcd8516def6c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a9f41e6463de88c3f979d796382fc24fb7e9cd41">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-9.6.0_618de9cd58d4737ebe7531ea3d161ba4aff9a293.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a93aa431de60b775c91158433f3c687f1d32cb9c">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-messaging-9.6.0_b36200f831d511c917d2f395944035e6b3631778.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_b1e10216e81eb5fd2889f37bb55ece4a1853ce01.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.android.support-mediarouter-v7-24.0.0_c1c52988d1e3fc5bd31f357202dfe09baa263f80.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7a343e17f154f513a09c12946fae0f172be079ec">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-common-9.6.0_8b7cc54c1b77481ec380beb530a22a14c68e547c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_4fe9bde7850289e376d73dd6d3660417dd60988f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="4cfc5a74aa9453cbec685cdbcb3e3f3539b483bd">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-ads-lite-9.6.0_a450114b7b3efca2c96206347d1c7eb2cbfa09cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="bf803332f826adea247cc452d0bb04d7943f0007">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-drive-9.6.0_1ba045482acd20cc9aaf09e6373b1d8d4050d8fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="4ab00b7d310cfdfff3a9446554485647153d0792">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-games-9.6.0_04ebb2fbe9de90dd3bfd0123781c4ab31c17989d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a723c85825d9591baec200523c10662e30c8bed7">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-ads-9.6.0_eea6580f34cb63c5944259d9fdbe78f069bf3eac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ba2f029ff37297295d2d197ac6e957b361bfccaf">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-9.6.0_946594be0299d59bf1bbd88d7398bf64dd49f06d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_b40deded7b5df34c55106eba6c5c351bf20138c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f2c9c986087e5862518757d0c988c8eac1a47bfd">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-framework-9.6.0_6bc2a28639021b4b8aca166ca7ca0068c15bfaad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_58ff1c38990c18aae4fff17027c9d2189ba00c04.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="97e3259dcdaa9b33014a849f6d3bdbb4ef478383">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-crash-9.6.0_fe87d73a602c659397b3a7db805a908dcbc51e46.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="73699fb64ea3de4a43d0f5c37dc525a5e1341ca1">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appinvite-9.6.0_7bfb1cb214be8591ea3b5bc50648611edb4855fb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a917154cf730ea6ec2495705309e6a4065cde2ac">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-panorama-9.6.0_1342a64106d1f5b98946c69ca31e9385365e29c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.2.1_ac2d6ac46ae2939421365580e134c55791d83ced.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="bd11b3899f275668a9355f19cea2c2320f5f9d14">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-common-9.6.0_6018a45e7bbdc80b79dfbdd90417c20381918feb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.android.support-palette-v7-24.0.0_a07b4a74a4e213919a8e7433c01e445137a93840.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f861fce2e9fa167e7fe8d8558cf2cbb910b9fb34">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-module-9.6.0_7b6780c23c7f9f3c66021e731ef51376fbed7f98.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="74d1712880eb2b4ab37ddf3c6a3232c883756726">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-impl-9.6.0_aa77d1b900631009268da19a5df6f9f22e3f82ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f6afcfbf1989631424f9ceaae6ee24777d3cf6ba">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-9.6.0_366c57f2b0c9778f6f7df92a6e63dd6b7c7f4e2f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d1e7862a5a7675940acb6efcab34b38de89c9e18">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-impl-9.6.0_0d4977bf2ab7478442bc7fc17363bdd46aa87d09.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9f5c557145ddef094005eb73d72a7eaf330a0cf1">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-identity-9.6.0_750ecaa48fb64baeef8e9f948811a1ed5477c08a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="300e72616fdf265bb36bff7adb1ebec7b1d72817">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-fitness-9.6.0_8e30eeefffb6ab99a87e96a646cf0258627d2018.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ef21408e3142ffbfbd4a7ec1762c3325c6c386c">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-base-9.6.0_ed8beb2d133f8d5cdbfd588270037e612e750c32.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="db0a4170961a16af6d7a5222bf90a5876eea4227">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-connection-9.6.0_3fc42021b787ca8a3fc89d4fafd428e24128fb96.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d39f676be8400123523882d189a1d84040d34339">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-iid-9.6.0_118e15fa46e42035a7a951fb379a9a978e9e370d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="266e4ac186afacc3b220a0cf8382348283b42407">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-vision-9.6.0_0d7fb825b95c26740dd66502a09688a30c18d4ab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_f74dbbd9bb220a40549996a961079ec52ae4e75f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="580fa73d5bf63ffd04b9d66d0e75a2ed21842702">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-9.6.0_5e620f1953b73aa91a9bcd61cd41bf5467743541.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_c68a5402df6f825acfd4b869bed3f29f37bc45ab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-places\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3270d392adef5decc7bace1a3c2e749bec7bf19e">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-places-9.6.0_842b06dc74e70858a7bcd7a11bbfde1de0ab4d55.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_bcef3f4f1bdf0bf1ade874a61bb18fd698bae717.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="93a0248fe0524b4fa2d16f5f7c3cff8452796454">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-9.6.0_c7c65b5e1ebaf8dc14574130032c844e2be0f0a7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="53f7fbab5e6f4149eb5a1cdeabaeeeee11a84ebe">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-config-9.6.0_4db2e267b11f4250898af2144fed8c8401c993b5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5e651c1430cc9b8a3b3b5a9d92bb173214dfdf42">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-storage-common-9.6.0_1f8e30cecc0e33bcb773c85f21b7e6b2471c9429.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c48db997d87eb3e3ad47713cfbfe7cb878a2e66c">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tagmanager-api-9.6.0_f7329a96ed2d8d313f4e6d122314e9a903045532.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ea5537e2a88ce0497d3e2272b1cf93f2e0c77b0d">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-location-9.6.0_e0c12f881d4943880ac688eb7d3167a5a5e0aa25.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="938ba83fbb26987368049237e47718d56e91e222">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-nearby-9.6.0_4282cb94c81c8c34f9c45a7bd04918d27b2cdb02.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5243af50631020511cf2403789678149b1a319e6">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-9.6.0_3424186205d964fd094f08a270079729cab610d3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_13dd008477bf0185514b94258997550cc9902b6a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1bf2ceb0034efe20249a561096f6e288cce7a0a4">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-9.6.0_6812ff231cdf8537163dc1ee37ef5ded9f7dcdb5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_06b6b4e469085a13856bcec3a9ea7fa36f8ef14a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_8ed74e3caaf2036a02255109a1bc340241b4812d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.1_d9eacff10289fe46b439bb15aec5d87d070e4b97.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="de2c50f4a24277d22d675d598640da6d4622b14d">
+        <dex dex="C:\Users\Soufiane\Project-Mobiele-Apps\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-storage-9.6.0_6945ed24259033094c6e1bba35b924c8cae8ea63.jar" />
+    </item>
+
+</items>

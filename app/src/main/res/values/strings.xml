@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Project UCLL</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="item_pub_date">item pubdate</string>
+    <string name="item_title">item title</string>
+    <string name="items_title">RSS FEED </string>
+    <string name="item_description"></string>
+    <string name="item_link">Klik hier om te openen in de browser</string>
+
+
+</resources>

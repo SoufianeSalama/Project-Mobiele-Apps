@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_inloggen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="be.ucll.project2.InloggenActivity"
+    android:weightSum="1"
+    android:gravity="center"
+    android:windowSoftInputMode="adjustResize">
+
+
+    <ImageView
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_logo_ucll"
+        android:id="@+id/imageView3"
+        android:layout_weight="0.51" />
+
+    <EditText
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:hint="r-nummer"
+        android:layout_width="300dp" />
+
+    <EditText
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText4"
+        android:layout_width="300dp"
+        android:hint="wachtwoord"
+        android:layout_height="50dp" />
+
+    <Button
+        android:text="Inloggen"
+        android:layout_width="350dp"
+        android:id="@+id/button4"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05" />
+
+</LinearLayout>
