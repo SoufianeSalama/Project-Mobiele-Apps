@@ -28,14 +28,14 @@
         android:layout_height="50dp"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/editTextGebruikersnaam"
         android:hint="r-nummer"
         android:layout_width="300dp" />
 
     <EditText
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText4"
+        android:id="@+id/editTextWachtwoord"
         android:layout_width="300dp"
         android:hint="wachtwoord"
         android:layout_height="50dp" />
@@ -48,8 +48,10 @@
     <Button
         android:text="Inloggen"
         android:layout_width="350dp"
-        android:id="@+id/button4"
+        android:id="@+id/buttonInloggen"
         android:layout_height="wrap_content"
-        android:layout_weight="0.05" />
+        android:layout_weight="0.05"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#DE0248" />
 
 </LinearLayout>

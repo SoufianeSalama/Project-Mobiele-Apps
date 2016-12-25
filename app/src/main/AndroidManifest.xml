@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".MapActivity" />
         <activity android:name=".ItemActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

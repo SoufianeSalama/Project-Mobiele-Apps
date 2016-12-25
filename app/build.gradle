@@ -29,5 +29,10 @@ dependencies {
     compile 'com.android.support:design:24.2.1'
     testCompile 'junit:junit:4.12'
     compile 'com.google.android.gms:play-services:9.6.0'
+
+    compile 'com.google.code.gson:gson:2.3'
+    compile 'com.microsoft.azure:azure-mobile-android:3.1.0'
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+
 }
 
