@@ -15,9 +15,14 @@
     <ImageView
         android:layout_width="391dp"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_logo_ucll"
         android:id="@+id/imageView3"
-        android:layout_weight="0.51" />
+        android:layout_weight="0.51"
+        app:srcCompat="@mipmap/ic_logo_ucllb" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.16" />
 
     <EditText
         android:layout_height="50dp"
@@ -34,6 +39,11 @@
         android:layout_width="300dp"
         android:hint="wachtwoord"
         android:layout_height="50dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.09" />
 
     <Button
         android:text="Inloggen"
