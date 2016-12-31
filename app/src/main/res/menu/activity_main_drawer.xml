@@ -6,14 +6,14 @@
         <item
             android:id="@+id/nav_first_layout"
             android:icon="@drawable/ic_place_black_24dp"
-            android:title="Kaart" />
+            android:title="Campussen" />
         <item
             android:id="@+id/nav_second_layout"
             android:icon="@drawable/ic_wifi_tethering_black_24dp"
-            android:title="RSS Feed" />
+            android:title="UCLL Nieuws" />
         <item
             android:id="@+id/nav_third_layout"
-            android:icon="@drawable/ic_insert_invitation_black_24dp"
+            android:icon="@drawable/ic_directions_bus_black"
             android:title="Bussen" />
     </group>
 
