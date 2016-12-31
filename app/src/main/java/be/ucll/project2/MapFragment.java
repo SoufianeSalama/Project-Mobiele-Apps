@@ -1,6 +1,7 @@
 package be.ucll.project2;
 
 import android.app.Fragment;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -15,13 +16,19 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.plus.model.people.Person;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 import com.microsoft.windowsazure.mobileservices.table.TableQueryCallback;
 
+import java.lang.reflect.Type;
 import java.net.MalformedURLException;
 import java.util.List;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class MapFragment extends Fragment implements OnMapReadyCallback {
     View myView;
@@ -29,8 +36,13 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     private MapView mapView;
     private GoogleMap googleMap;
 
-    private MobileServiceClient mClient;
-    private MobileServiceTable<Campussen> mCampussen;
+    //private MobileServiceClient mClient;
+    //private MobileServiceTable<Campussen> mCampussen;
+
+    private SharedPreferences savedValues;
+
+    private List<Campussen> LijstCampussen;
+
 
     @Nullable
     @Override
@@ -41,7 +53,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         mapView.onCreate(savedInstanceState);
         mapView.onResume();
         mapView.getMapAsync(this);
-        try{
+        savedValues = this.getActivity().getSharedPreferences("SavedValues",MODE_PRIVATE);
+
+
+        /*try{
             mClient = new MobileServiceClient(
                     "https://projectmobieleapps.azurewebsites.net",
                     this.getActivity()
@@ -54,7 +69,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         catch(MalformedURLException e) {
             Log.e("Malformed url", e.getMessage());
             System.out.println("try mislukt");
-        }
+        }*/
         return myView;
     }
 
@@ -68,10 +83,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         googleMap.addMarker(new MarkerOptions().position(thuis).title("Thuis"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(thuis, 10));
 
-        getLocaties();
+        //getLocaties();  // -> vanuit Azure
+        getCampussen(); // -> vanuit de sharedPreferences
     }
 
-    private void getLocaties(){
+ /*   private void getLocaties(){
         System.out.println("in de methode");
         mCampussen.select().execute(new TableQueryCallback<Campussen>() {
             @Override
@@ -87,14 +103,22 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
                         System.out.println(coor);
                     }
                 }
-
                 else{
                     Log.e("failed", exception.getMessage());
 
                 }
             }
         });
+    }*/
 
-
+    private void getCampussen(){
+        Gson gson = new Gson();
+        String json = savedValues.getString("Campussen", "");
+        Type type = new TypeToken< List < Campussen >>() {}.getType();
+        LijstCampussen = gson.fromJson(json, type);
+        for (Campussen campus : LijstCampussen){
+            LatLng coor = new LatLng(Double.parseDouble(campus.getCoordinaatlat()), Double.parseDouble(campus.getCoordinaatlng()));
+            googleMap.addMarker(new MarkerOptions().position(coor).title(campus.getNaam()).snippet(campus.getAdres()).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_logo_ucllb)));
+        }
     }
 }

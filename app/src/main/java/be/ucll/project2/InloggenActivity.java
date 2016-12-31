@@ -3,6 +3,8 @@ package be.ucll.project2;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
@@ -29,16 +32,22 @@ public class InloggenActivity extends AppCompatActivity {
     EditText editTextGebruikersnaam;
     EditText editTextWachtwoord;
 
+    private SharedPreferences savedValues;
+
     Gebruikers gebruiker;
     private MobileServiceClient mClient;
     private MobileServiceTable<Gebruikers> mGebruiker;
+    private MobileServiceTable<Campussen> mCampussen;
 
-    String Wachtwoord;
+
+    private String Wachtwoord;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inloggen);
+
+        savedValues = getSharedPreferences("SavedValues", MODE_PRIVATE);
 
         try{
             mClient = new MobileServiceClient(
@@ -47,6 +56,7 @@ public class InloggenActivity extends AppCompatActivity {
             );
 
             mGebruiker = mClient.getTable(Gebruikers.class);
+            mCampussen = mClient.getTable(Campussen.class);
         }
         catch(MalformedURLException e){
             Log.e("Malformed url" ,e.getMessage());
@@ -106,6 +116,10 @@ public class InloggenActivity extends AppCompatActivity {
                     else{
                         for (Gebruikers ge : result){
                             if (ge.getWachtwoord().equals(Wachtwoord)){
+
+                                saveGegevens(ge);
+
+
                                 Context context = getApplicationContext();
                                 Toast toast = Toast.makeText(context, Html.fromHtml("Welkom <font color='#DE0248' ><b>" + ge.getNaam() + "</b></font>"), Toast.LENGTH_LONG);
                                 toast.show();
@@ -144,5 +158,48 @@ public class InloggenActivity extends AppCompatActivity {
 
         return false;
 
+    }
+
+    public void saveGegevens(Gebruikers gebruiker){
+        // Gegevens van de ingelogde gebruiker in de SharedPreferencs zetten onder de key Gebruiker
+        Editor prefsEditor = savedValues.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(gebruiker);
+        prefsEditor.putString("Gebruiker", json);
+        prefsEditor.commit();
+
+        //Controleren of er een key Campussen bestaat
+        Gson gson2 = new Gson();
+        String json2 = savedValues.getString("Campussen", "");
+        if (json2.equals("")){
+            //er bestaat niks onder de key Campussen
+            // alle campussen van Azure afhalen
+            mCampussen.select().execute(new TableQueryCallback<Campussen>() {
+                @Override
+                public void onCompleted(List<Campussen> lijstCampussen, int count, Exception exception, ServiceFilterResponse response) {
+                    if (exception == null){
+                        Editor e = savedValues.edit();
+
+                        // convert java object to JSON format,
+                        // and returned as JSON formatted string
+                        String jsonLijstCampussen = new Gson().toJson(lijstCampussen);
+                        e.putString("Campussen", jsonLijstCampussen);
+                        e.commit();
+                        System.out.println("Campussen in sharedPreferences");
+
+                    }
+
+                    else{
+                        Log.e("failed", exception.getMessage());
+
+                    }
+                }
+            });
+        }
+        else{
+            //alle campussen staan onder de key Campussen
+            System.out.println("Campussen staan al in sharedPreferences");
+
+        }
     }
 }
