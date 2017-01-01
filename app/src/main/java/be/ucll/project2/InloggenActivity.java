@@ -38,7 +38,7 @@ public class InloggenActivity extends AppCompatActivity {
     private MobileServiceClient mClient;
     private MobileServiceTable<Gebruikers> mGebruiker;
     private MobileServiceTable<Campussen> mCampussen;
-
+    DataHelper dh;
 
     private String Wachtwoord;
 
@@ -47,9 +47,13 @@ public class InloggenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inloggen);
 
+        // Werken met klasse DataHelper
+        dh = new DataHelper(this);
+        //
+
         savedValues = getSharedPreferences("SavedValues", MODE_PRIVATE);
 
-        try{
+        try {
             mClient = new MobileServiceClient(
                     "https://projectmobieleapps.azurewebsites.net",
                     this
@@ -57,9 +61,8 @@ public class InloggenActivity extends AppCompatActivity {
 
             mGebruiker = mClient.getTable(Gebruikers.class);
             mCampussen = mClient.getTable(Campussen.class);
-        }
-        catch(MalformedURLException e){
-            Log.e("Malformed url" ,e.getMessage());
+        } catch (MalformedURLException e) {
+            Log.e("Malformed url", e.getMessage());
         }
 
         buttonInloggen = (Button) findViewById(R.id.buttonInloggen);
@@ -70,22 +73,23 @@ public class InloggenActivity extends AppCompatActivity {
         buttonInloggen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (editTextGebruikersnaam.getText().toString().equals("") &&  editTextWachtwoord.getText().toString().equals("")){
+                if (editTextGebruikersnaam.getText().toString().equals("") && editTextWachtwoord.getText().toString().equals("")) {
                     editTextGebruikersnaam.setError("Vul een gebruikersnaam in (r-nummer)");
                     editTextWachtwoord.setError("Vul een wachtwoord in");
                     System.out.println("gebruikersnaam en wachtwoord is leeg");
 
-                }else if (editTextGebruikersnaam.getText().toString().equals("")){
+                } else if (editTextGebruikersnaam.getText().toString().equals("")) {
                     editTextGebruikersnaam.setError("Vul een gebruikersnaam in (r-nummer)");
 
 
-                }
-                else if (editTextWachtwoord.getText().toString().equals("")){
+                } else if (editTextWachtwoord.getText().toString().equals("")) {
                     editTextWachtwoord.setError("Vul een wachtwoord in");
                     System.out.println(editTextWachtwoord.getText().toString());
 
-                }
-                else{
+                } else {
+                    //dh.setGebruikersnaamWachtwoord(editTextGebruikersnaam.getText().toString(), editTextWachtwoord.getText().toString());
+                    //test();
+                    //dh.controleerGebruiker();
                     controleerGebruiker(editTextGebruikersnaam.getText().toString(), editTextWachtwoord.getText().toString());
 
                 }
@@ -94,17 +98,72 @@ public class InloggenActivity extends AppCompatActivity {
 
     }
 
-    private boolean controleerGebruiker(String gebruikersnaam, final String wachtwoord){
+    /*public void test(){
+        String result ="";
+
+        //String result = dh.controleerGebruiker();
+        Context context = getApplicationContext();
+        Toast toast;
+        AlertDialog alertDialog;
+
+        dh.controleerGebruiker();
+        result = dh.getResultaat();
+
+        switch (result){
+            case "Unknown" :
+                // gebruiker is niet gekend
+                CharSequence text = "Gebruiker niet gekend";
+
+                toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
+                toast.show();
+                editTextGebruikersnaam.setError("Gebruiker niet gekend");
+                editTextWachtwoord.setError("Gebruiker niet gekend");
+                break;
+
+            case "NotEqual":
+                // wachtwoord is fout
+                //Onbekende combinatie van r-nummer en wachtwoord
+                alertDialog = new AlertDialog.Builder(InloggenActivity.this).create();
+                alertDialog.setTitle("Fout");
+                alertDialog.setMessage("Onbekende combinatie van gebruikersnaam en wachtwoord.");
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+
+
+                editTextGebruikersnaam.setError("Onbekende combinatie van gebruikersnaam en wachtwoord");
+                editTextWachtwoord.setError("Onbekende combinatie van gebruikersnaam en wachtwoord");
+                break;
+
+            case "True" :
+                //toast = Toast.makeText(context, Html.fromHtml("Welkom <font color='#DE0248' ><b>" + ge.getNaam() + "</b></font>"), Toast.LENGTH_LONG);
+                toast = Toast.makeText(context, Html.fromHtml("Welkom <font color='#DE0248' ><b>g</b></font>"), Toast.LENGTH_LONG);
+                toast.show();
+                Intent intent = new Intent(InloggenActivity.this, MainActivity.class);
+                startActivity(intent);
+
+            default:
+                // error
+                break;
+
+        }
+    }*/
+
+    private boolean controleerGebruiker(String gebruikersnaam, final String wachtwoord) {
         this.Wachtwoord = wachtwoord;
 
 
         mGebruiker.where().field("gebruikersnaam").eq(val(gebruikersnaam)).top(1).execute(new TableQueryCallback<Gebruikers>() {
             @Override
             public void onCompleted(List<Gebruikers> result, int count, Exception exception, ServiceFilterResponse response) {
-                if (exception == null){
+                if (exception == null) {
                     System.out.println("succeeded");
                     System.out.println(result);
-                    if (result.isEmpty()){
+                    if (result.isEmpty()) {
                         Context context = getApplicationContext();
                         CharSequence text = "Gebruiker niet gekend";
 
@@ -112,12 +171,13 @@ public class InloggenActivity extends AppCompatActivity {
                         toast.show();
                         editTextGebruikersnaam.setError("Gebruiker niet gekend");
                         editTextWachtwoord.setError("Gebruiker niet gekend");
-                    }
-                    else{
-                        for (Gebruikers ge : result){
-                            if (ge.getWachtwoord().equals(Wachtwoord)){
+                    } else {
+                        for (Gebruikers ge : result) {
+                            if (ge.getWachtwoord().equals(Wachtwoord)) {
 
-                                saveGegevens(ge);
+                                dh.saveGebruiker(ge);
+                                dh.saveCampussenUitAzure();
+                                //saveGegevens(ge);
 
 
                                 Context context = getApplicationContext();
@@ -126,8 +186,7 @@ public class InloggenActivity extends AppCompatActivity {
                                 Intent intent = new Intent(InloggenActivity.this, MainActivity.class);
                                 startActivity(intent);
 
-                            }
-                            else{
+                            } else {
                                 AlertDialog alertDialog = new AlertDialog.Builder(InloggenActivity.this).create();
                                 alertDialog.setTitle("Fout");
                                 alertDialog.setMessage("Onbekende combinatie van gebruikersnaam en wachtwoord.");
@@ -148,8 +207,7 @@ public class InloggenActivity extends AppCompatActivity {
                             System.out.println(ge.getWachtwoord());
                         }
                     }
-                }
-                else{
+                } else {
                     Log.e("failed", exception.getMessage());
 
                 }
@@ -160,46 +218,4 @@ public class InloggenActivity extends AppCompatActivity {
 
     }
 
-    public void saveGegevens(Gebruikers gebruiker){
-        // Gegevens van de ingelogde gebruiker in de SharedPreferencs zetten onder de key Gebruiker
-        Editor prefsEditor = savedValues.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(gebruiker);
-        prefsEditor.putString("Gebruiker", json);
-        prefsEditor.commit();
-
-        //Controleren of er een key Campussen bestaat
-        Gson gson2 = new Gson();
-        String json2 = savedValues.getString("Campussen", "");
-        if (json2.equals("")){
-            //er bestaat niks onder de key Campussen
-            // alle campussen van Azure afhalen
-            mCampussen.select().execute(new TableQueryCallback<Campussen>() {
-                @Override
-                public void onCompleted(List<Campussen> lijstCampussen, int count, Exception exception, ServiceFilterResponse response) {
-                    if (exception == null){
-                        Editor e = savedValues.edit();
-
-                        // convert java object to JSON format,
-                        // and returned as JSON formatted string
-                        String jsonLijstCampussen = new Gson().toJson(lijstCampussen);
-                        e.putString("Campussen", jsonLijstCampussen);
-                        e.commit();
-                        System.out.println("Campussen in sharedPreferences");
-
-                    }
-
-                    else{
-                        Log.e("failed", exception.getMessage());
-
-                    }
-                }
-            });
-        }
-        else{
-            //alle campussen staan onder de key Campussen
-            System.out.println("Campussen staan al in sharedPreferences");
-
-        }
-    }
 }

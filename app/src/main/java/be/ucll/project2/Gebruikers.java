@@ -28,7 +28,7 @@ public class Gebruikers {
 
     // Item naam
     @com.google.gson.annotations.SerializedName("campusId")
-    private Integer mCampusId;
+    private String mCampusId;
 
     // Item naam
     @com.google.gson.annotations.SerializedName("klas")
@@ -59,7 +59,7 @@ public class Gebruikers {
     }
 
     // get Naam
-    public Integer getCampusId(){
+    public String getCampusId(){
         return mCampusId;
     }
 
@@ -112,10 +112,10 @@ public class Gebruikers {
     /**
      * Sets the naam
      *
-     * @param number
+     * @param text
      *            text to set
      */
-    public final void setCampusId(Integer number) {        mCampusId = number;    }
+    public final void setCampusId(String text) {        mCampusId = text;    }
 
     /**
      * Sets the naam
