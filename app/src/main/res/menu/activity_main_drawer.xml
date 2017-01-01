@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+    <!--<group android:checkableBehavior="single">-->
 
         <item
-            android:id="@+id/nav_first_layout"
+            android:id="@+id/nav_campussen_layout"
             android:icon="@drawable/ic_place_black_24dp"
             android:title="Campussen" />
         <item
-            android:id="@+id/nav_second_layout"
+            android:id="@+id/nav_nieuws_layout"
             android:icon="@drawable/ic_wifi_tethering_black_24dp"
             android:title="UCLL Nieuws" />
         <item
-            android:id="@+id/nav_third_layout"
+            android:id="@+id/nav_bussen_layout"
             android:icon="@drawable/ic_directions_bus_black"
             android:title="Bussen" />
-    </group>
+    <!--</group>
 
     <item android:title="Settings">
-        <menu>
+        <menu>-->
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/nav_profiel_layout"
                 android:icon="@drawable/ic_face_black_24dp"
-                android:title="Inloggen" />
+                android:title="Profiel" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_instellingen_layout"
                 android:icon="@drawable/ic_settings_black_24dp"
                 android:title="Instellingen" />
-        </menu>
-    </item>
+        <!--</menu>-->
+    <!--</item>-->
 
 </menu>

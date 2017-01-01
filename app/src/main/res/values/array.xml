@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nieuws_array">
+        <item>UCLL Nieuws</item>
+        <item>HLN.be</item>
+    </string-array>
+</resources>
