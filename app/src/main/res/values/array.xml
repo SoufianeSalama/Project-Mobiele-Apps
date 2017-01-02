@@ -4,4 +4,9 @@
         <item>UCLL Nieuws</item>
         <item>HLN.be</item>
     </string-array>
+
+    <string-array name="nieuws_array_waarde">
+        <item>https://www.ucll.be/rss.xml</item>
+        <item>http://www.hln.be/rss.xml</item>
+    </string-array>
 </resources>

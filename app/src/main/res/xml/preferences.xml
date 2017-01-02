@@ -13,10 +13,10 @@
 
 
         <ListPreference
-            android:key="list_nieuws"
+            android:key="nieuws_url"
             android:defaultValue="1"
             android:title="Nieuwsberichten"
             android:entries="@array/nieuws_array"
-            android:entryValues="@array/nieuws_array" />
+            android:entryValues="@array/nieuws_array_waarde" />
     </PreferenceCategory>
 </PreferenceScreen>

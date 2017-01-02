@@ -4,6 +4,8 @@ package be.ucll.project2;
  * Created by Meneer Doos on 2/12/2016.
  */
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 import org.xml.sax.InputSource;
@@ -18,19 +20,27 @@ import java.net.URL;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import static android.content.Context.MODE_PRIVATE;
+
 public class FileIO {
-    private final String URL_STRING ="https://www.ucll.be/rss.xml";// "http://www.hln.be/rss.xml";
+    private String URL_STRING ="";// "http://www.hln.be/rss.xml";
     private final String FILENAME = "news_feed.xml";
     private Context context = null;
 
+    private SharedPreferences pref;
+
     public FileIO (Context context) {
         this.context = context;
+        pref = PreferenceManager.getDefaultSharedPreferences(context);
+        this.URL_STRING = pref.getString("nieuws_url", "https://www.ucll.be/rss.xml");
+
     }
 
     public void downloadFile() {
         try{
             // get the URL
-            URL url = new URL("http://www.hln.be/rss.xml");
+            //URL url = new URL("http://www.hln.be/rss.xml");
+            URL url = new URL(this.URL_STRING);
 
             // get the input stream
             InputStream in = url.openStream();

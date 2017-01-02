@@ -86,15 +86,15 @@ public class GeofenceHelper implements
         dh = new DataHelper(this.activity);
         List<Campussen> lijstCampussen = dh.getCampussenStorage();
 
-        /*for (Campussen campus : lijstCampussen ){
+        for (Campussen campus : lijstCampussen ){
             mGeofenceList.add(new Geofence.Builder()
-                    .setRequestId(campus.getId())
+                    .setRequestId(campus.getNaam())
                     .setCircularRegion(  Double.parseDouble(campus.getCoordinaatlat()), Double.parseDouble(campus.getCoordinaatlng()),1000)
                     .setExpirationDuration(Geofence.NEVER_EXPIRE)
                     .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER)
                     .build()
             );
-        }*/
+        }
 
         mGeofenceList.add(new Geofence.Builder()
                 .setRequestId("324")

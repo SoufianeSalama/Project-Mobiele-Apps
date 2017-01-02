@@ -16,6 +16,7 @@ public class InstellingenFragment extends PreferenceFragment implements SharedPr
 {
     private SharedPreferences pref;
     private boolean geofenceEnabled;
+    private String nieuwsUrl;
 
     private GeofenceHelper gh;
     @Override
@@ -49,21 +50,21 @@ public class InstellingenFragment extends PreferenceFragment implements SharedPr
 
         if (key.equals("geofence_enabled")){
             geofenceEnabled = pref.getBoolean(key, true);
-
-
-
             if (geofenceEnabled){
                 // Geofences toevoegen
-
                 gh.geofencesToevoegen();
             }
             else{
                 // Geofences verwijderen
-
                 gh.geofencesVerwijderen();
-
             }
             System.out.println(geofenceEnabled);
+        }
+
+        if (key.equals("nieuws_url")){
+            nieuwsUrl = pref.getString(key, "https://www.ucll.be/rss.xml");
+
+            System.out.println(nieuwsUrl);
         }
     }
 }

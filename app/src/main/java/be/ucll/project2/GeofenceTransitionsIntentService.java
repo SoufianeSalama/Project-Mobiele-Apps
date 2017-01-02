@@ -32,11 +32,13 @@ public class GeofenceTransitionsIntentService extends IntentService {
     public GeofenceTransitionsIntentService() {
         // Use the TAG to name the worker thread.
         super(TAG);
+
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
+        System.out.println("In de OnCreate van intentService");
     }
 
     /**
