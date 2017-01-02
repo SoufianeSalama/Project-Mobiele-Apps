@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="be.ucll.project2">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_logo_ucllb"
@@ -26,6 +29,11 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAUkCHfwa1GGGEy0PJtLil-vGWnxNpOS-c"/>
+
+        <service android:name=".GeofenceTransitionsIntentService" />
     </application>
+
+
+
 
 </manifest>

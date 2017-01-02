@@ -5,8 +5,8 @@
 
        <SwitchPreference
             android:defaultValue="false"
-            android:title="Geolocation"
-            android:key="switch_geofence"
+            android:title="Geofence"
+            android:key="geofence_enabled"
             android:summary="Een melding krijgen wanneer u in de buurt van een UCLL campus komt." />
     </PreferenceCategory>
     <PreferenceCategory android:title="Nieuws">

@@ -30,7 +30,7 @@ public class FileIO {
     public void downloadFile() {
         try{
             // get the URL
-            URL url = new URL("https://www.ucll.be/rss.xml");
+            URL url = new URL("http://www.hln.be/rss.xml");
 
             // get the input stream
             InputStream in = url.openStream();
