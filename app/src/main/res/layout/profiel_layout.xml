@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="6dp">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:layout_marginBottom="15dp">
+
+                            <TextView
+                                android:text="Welkom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView2"
+                                android:textSize="20sp"
+                                android:layout_marginRight="5dp" />
+
+                            <TextView
+                                android:text="Soufiane Salama"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textViewNaam"
+                                android:textSize="20sp"
+                                android:textStyle="normal|bold" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:text="r0584294"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textViewRNummer"
+                                android:textSize="16sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:text="3ICT1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textViewKlas"
+                                android:textSize="16sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:text="Management-Technologie UC Limburg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/textViewGroep"
+                                android:layout_span="2"
+                                android:textSize="16sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:text="UCLL Campus Diepenbeek"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/textViewCampus"
+                                android:layout_span="2"
+                                android:textSize="16sp" />
+                        </TableRow>
+                    </TableLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="6dp"
+                    android:layout_height="150dp"
+                    app:cardBackgroundColor="?attr/colorPrimary"
+                    android:clickable="true"
+                    android:id="@+id/CardViewUcll">
+
+                    <TextView
+                        android:text="UCLL.be"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/textViewUCLL"
+                        tools:textSize="30sp"
+                        android:gravity="center" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/CardViewIntranet"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="6dp"
+                    android:layout_height="150dp"
+                    android:clickable="true"
+                    app:cardBackgroundColor="?attr/colorPrimary">
+
+                    <TextView
+                        android:text="Intranet"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/textView5"
+                        tools:textSize="30sp"
+                        android:gravity="center" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/CardViewToledo"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="6dp"
+                    android:layout_height="150dp"
+                    android:clickable="true"
+                    app:cardBackgroundColor="?attr/colorPrimary">
+
+                    <TextView
+                        android:text="Toledo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/textView8"
+                        tools:textSize="30sp"
+                        android:gravity="center" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/CardViewLessenrooster"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="6dp"
+                    android:layout_height="150dp"
+                    android:clickable="true"
+                    app:cardBackgroundColor="?attr/colorPrimary">
+
+                    <TextView
+                        android:text="Lessenrooster"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/textView9"
+                        tools:textSize="30sp"
+                        android:gravity="center" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
+
+

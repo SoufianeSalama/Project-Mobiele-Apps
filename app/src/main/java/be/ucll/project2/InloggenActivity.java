@@ -1,5 +1,6 @@
 package be.ucll.project2;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -39,6 +40,7 @@ public class InloggenActivity extends AppCompatActivity {
     private MobileServiceTable<Gebruikers> mGebruiker;
     private MobileServiceTable<Campussen> mCampussen;
     DataHelper dh;
+    ProgressDialog dialog;
 
     private String Wachtwoord;
 
@@ -91,6 +93,9 @@ public class InloggenActivity extends AppCompatActivity {
                     //test();
                     //dh.controleerGebruiker();
                     controleerGebruiker(editTextGebruikersnaam.getText().toString(), editTextWachtwoord.getText().toString());
+                    dialog = new ProgressDialog(InloggenActivity.this);
+                    dialog.setMessage("Inloggen...");
+                    dialog.show();
 
                 }
             }
@@ -179,7 +184,7 @@ public class InloggenActivity extends AppCompatActivity {
                                 dh.saveCampussenUitAzure();
                                 //saveGegevens(ge);
 
-
+                                dialog.dismiss();
                                 Context context = getApplicationContext();
                                 Toast toast = Toast.makeText(context, Html.fromHtml("Welkom <font color='#DE0248' ><b>" + ge.getNaam() + "</b></font>"), Toast.LENGTH_LONG);
                                 toast.show();
@@ -187,6 +192,8 @@ public class InloggenActivity extends AppCompatActivity {
                                 startActivity(intent);
 
                             } else {
+                                dialog.dismiss();
+
                                 AlertDialog alertDialog = new AlertDialog.Builder(InloggenActivity.this).create();
                                 alertDialog.setTitle("Fout");
                                 alertDialog.setMessage("Onbekende combinatie van gebruikersnaam en wachtwoord.");

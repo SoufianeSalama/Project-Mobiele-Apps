@@ -20,6 +20,12 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        android.app.FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.content_frame, new ProfielFragment())
+                .commit();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -95,6 +101,9 @@ public class MainActivity extends AppCompatActivity
                     .replace(R.id.content_frame, new BusFragment())
                     .commit();
         } else if (id == R.id.nav_profiel_layout) {
+            fragmentManager.beginTransaction()
+                    .replace(R.id.content_frame, new ProfielFragment())
+                    .commit();
 
         } else if (id == R.id.nav_instellingen_layout) {
             fragmentManager.beginTransaction()

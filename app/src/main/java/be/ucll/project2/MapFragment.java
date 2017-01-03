@@ -1,6 +1,7 @@
 package be.ucll.project2;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -15,6 +17,7 @@ import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.plus.model.people.Person;
 import com.google.gson.Gson;
@@ -55,21 +58,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         mapView.getMapAsync(this);
         savedValues = this.getActivity().getSharedPreferences("SavedValues",MODE_PRIVATE);
 
-
-        /*try{
-            mClient = new MobileServiceClient(
-                    "https://projectmobieleapps.azurewebsites.net",
-                    this.getActivity()
-            );
-
-            mCampussen = mClient.getTable(Campussen.class);
-            System.out.println("try gelukt");
-
-        }
-        catch(MalformedURLException e) {
-            Log.e("Malformed url", e.getMessage());
-            System.out.println("try mislukt");
-        }*/
         return myView;
     }
 
@@ -83,33 +71,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         googleMap.addMarker(new MarkerOptions().position(thuis).title("Thuis"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(thuis, 10));
 
-        //getLocaties();  // -> vanuit Azure
         getCampussen(); // -> vanuit de sharedPreferences
-    }
 
- /*   private void getLocaties(){
-        System.out.println("in de methode");
-        mCampussen.select().execute(new TableQueryCallback<Campussen>() {
-            @Override
-            public void onCompleted(List<Campussen> result, int count, Exception exception, ServiceFilterResponse response) {
-                if (exception == null){
-                    System.out.println("succeeded");
-                    for (Campussen campus : result){
-
-                        System.out.println(campus.getNaam());
-                        System.out.println(campus.getOpleidingen());
-                        LatLng coor = new LatLng(Double.parseDouble(campus.getCoordinaatlat()), Double.parseDouble(campus.getCoordinaatlng()));
-                        googleMap.addMarker(new MarkerOptions().position(coor).title(campus.getNaam()).snippet(campus.getAdres()).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_logo_ucllb)));
-                        System.out.println(coor);
-                    }
-                }
-                else{
-                    Log.e("failed", exception.getMessage());
-
-                }
             }
-        });
-    }*/
+
 
     private void getCampussen(){
         Gson gson = new Gson();
@@ -117,8 +82,17 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         Type type = new TypeToken< List < Campussen >>() {}.getType();
         LijstCampussen = gson.fromJson(json, type);
         for (Campussen campus : LijstCampussen){
-            LatLng coor = new LatLng(Double.parseDouble(campus.getCoordinaatlat()), Double.parseDouble(campus.getCoordinaatlng()));
-            googleMap.addMarker(new MarkerOptions().position(coor).title(campus.getNaam()).snippet(campus.getAdres()).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_logo_ucllb)));
+            LatLng coor = new LatLng(
+                    Double.parseDouble(campus.getCoordinaatlat()),
+                    Double.parseDouble(campus.getCoordinaatlng()));
+
+            googleMap.addMarker(new MarkerOptions()
+                    .position(coor)
+                    .title(campus.getNaam())
+                    .snippet(campus.getAdres())
+                    .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_logo_ucllb)));
+
+
         }
     }
 }
