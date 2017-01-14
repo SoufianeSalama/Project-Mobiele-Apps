@@ -169,10 +169,9 @@ public class InloggenActivity extends AppCompatActivity {
                     System.out.println("succeeded");
                     System.out.println(result);
                     if (result.isEmpty()) {
-                        Context context = getApplicationContext();
                         CharSequence text = "Gebruiker niet gekend";
 
-                        Toast toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
+                        Toast toast = Toast.makeText(InloggenActivity.this, text, Toast.LENGTH_LONG);
                         toast.show();
                         editTextGebruikersnaam.setError("Gebruiker niet gekend");
                         editTextWachtwoord.setError("Gebruiker niet gekend");

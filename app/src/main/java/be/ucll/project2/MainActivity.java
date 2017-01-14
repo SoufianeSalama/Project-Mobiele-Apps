@@ -45,13 +45,6 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*/
-                LayoutInflater linf = LayoutInflater.from(context);
-                final View inflator = linf.inflate(R.layout.nieuwetaakdialog, null);
-
-               /* final EditText taakTitel = (EditText) inflator.findViewById(R.id.editTextTitel);
-                final EditText taakBeschrijving =(EditText) inflator.findViewById(R.id.editTextBeschrijving);*/
 
                 AlertDialog dialog = new AlertDialog.Builder(context)
                         .setTitle("Nieuwe taak toevoegen")
@@ -64,27 +57,37 @@ public class MainActivity extends AppCompatActivity
                                 EditText taakTitel = (EditText) dl.findViewById(R.id.editTextTitel);
                                 EditText taakBeschrijving =(EditText) dl.findViewById(R.id.editTextBeschrijving);
 
-                                Taak taak = new Taak();
-                                taak.setTaakTitel(taakTitel.getText().toString());
-                                taak.setTaakBeschrijving(taakBeschrijving.getText().toString());
+                                if (taakTitel.getText().toString().equals("")){
+                                    taakTitel.setError("Taak moet een titel hebben!");
+                                }
+                                else{
+                                    Taak taak = new Taak();
+                                    taak.setTaakTitel(taakTitel.getText().toString());
+                                    taak.setTaakBeschrijving(taakBeschrijving.getText().toString());
 
-                                Calendar c = Calendar.getInstance();
-                                System.out.println("Current time => " + c.getTime());
+                                    Calendar c = Calendar.getInstance();
+                                    System.out.println("Current time => " + c.getTime());
 
-                                SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
-                                String formattedDate = df.format(c.getTime());
+                                    SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+                                    String formattedDate = df.format(c.getTime());
 
-                                taak.setTaakDatum(formattedDate.toString());
+                                    taak.setTaakDatum(formattedDate.toString());
 
-                                dbhelper = new testDB(context);
-                                dbhelper.insertTask(taak);
-
+                                    dbhelper = new testDB(context);
+                                    dbhelper.insertTask(taak);
+                                    /*// de pagina refreshen
+                                    TakenFragment tf = new TakenFragment();
+                                    tf.getTakenMetSimpleAdapter();*/
+                                }
                             }
                         })
                         .setNegativeButton("Annuleer", null)
                         .show();
+
             }
         });
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -121,9 +124,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        /*if (id == R.id.action_settings) {
             return true;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
