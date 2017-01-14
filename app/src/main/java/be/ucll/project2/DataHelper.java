@@ -33,8 +33,6 @@ import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperati
 
 public class DataHelper {
 
-    //Proberen om allee in deze klasse de Azure DB te benaderen
-
     private MobileServiceClient mClient;
     private MobileServiceTable<Gebruikers> mGebruiker;
     private MobileServiceTable<Campussen> mCampussen;
@@ -45,8 +43,6 @@ public class DataHelper {
     private String wachtwoord;
 
     private List<Campussen> lijstCampussen;
-
-    private String resultaat = "Error";
 
 
     public DataHelper(Activity activityNaam){
@@ -66,43 +62,8 @@ public class DataHelper {
         }
     }
 
-    public void setGebruikersnaamWachtwoord(String gebruikersnaam, String wachtwoord){
-        this.gebruikersnaam = gebruikersnaam;
-        this.wachtwoord     = wachtwoord;
-    }
-    public String getResultaat(){
-        return this.resultaat;
-    }
 
-    public void controleerGebruiker(){
-
-        mGebruiker.where().field("gebruikersnaam").eq(val(this.gebruikersnaam)).top(1).execute(new TableQueryCallback<Gebruikers>() {
-            @Override
-            public void onCompleted(List<Gebruikers> result, int count, Exception exception, ServiceFilterResponse response) {
-                if (exception == null){
-
-                    if (result.isEmpty()){
-                        resultaat = "Unknown";
-                    }
-                    else{
-                        for (Gebruikers ge : result){
-                            if (ge.getWachtwoord().equals(wachtwoord)){
-                                resultaat = "True";
-                            }
-                            else{
-                                resultaat = "NotEqual";
-                            }
-                        }
-                    }
-                }
-                else{
-                    Log.e("failed", exception.getMessage());
-                }
-            }
-        });
-    }
-
-   public Campussen getCampusVanGebruiker(){
+    public Campussen getCampusVanGebruiker(){
         // Nodig om de bushaltes te krijgen van de campus waar de gebruiker les volgt, deze zitten in shared onder key Campussen
         // Maar eerst het campusId van de Campus opzoeken in shared onder de key gebruiker
         String CampusId;
@@ -120,7 +81,7 @@ public class DataHelper {
 
 
             if(campus.getId().equals(CampusId)) {
-                System.out.println("de gelukkige is " + campus.getNaam());
+                //System.out.println("de gelukkige is " + campus.getNaam());
 
                 return campus;
             }
@@ -141,6 +102,10 @@ public class DataHelper {
         Gson gson = new Gson();
         String json = savedValues.getString("Gebruiker", "");
         Gebruikers gebruiker = gson.fromJson(json, Gebruikers.class);
+        if (gebruiker == null){
+
+            return null;
+        }
         System.out.println(gebruiker.getNaam());
         System.out.println(gebruiker.getGebruikersnaam());
         System.out.println(gebruiker.getGroep());
@@ -168,6 +133,7 @@ public class DataHelper {
                         e.putString("Campussen", jsonLijstCampussen);
                         e.commit();
                         System.out.println("Campussen in sharedPreferences");
+
                     }
                     else{
                         Log.e("failed", exception.getMessage());

@@ -16,7 +16,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp">
+            android:padding="5dp">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -28,10 +28,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="taaknaam"
-                    android:textSize="30sp"
                     android:layout_alignParentLeft="true"
                     android:textStyle="normal|bold"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/taakid"
@@ -50,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="taakbeschrijving"
-                android:textSize="20dp"
+                android:textSize="18sp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />
@@ -60,7 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="taakdatum"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_alignParentLeft="true"/>
         </LinearLayout>
     </LinearLayout>
