@@ -15,6 +15,11 @@
             android:id="@+id/nav_bussen_layout"
             android:icon="@drawable/ic_directions_bus_black"
             android:title="Bussen" />
+
+        <item
+            android:id="@+id/nav_taken_layout"
+            android:icon="@drawable/ic_taken"
+            android:title="Taken" />
     <!--</group>
 
     <item android:title="Settings">

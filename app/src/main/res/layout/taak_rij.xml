@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/taaknaam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="taaknaam"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/taakbeschrijving"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="taakbeschrijving"
+                android:textSize="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/taakdatum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="taakdatum"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+        </LinearLayout>
+    </LinearLayout>-->
+
+   <!-- <Button
+        android:id="@+id/btnVerwijderen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verwijderen"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        />-->
+
+</RelativeLayout>

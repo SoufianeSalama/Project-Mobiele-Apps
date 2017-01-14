@@ -39,9 +39,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     private MapView mapView;
     private GoogleMap googleMap;
 
-    //private MobileServiceClient mClient;
-    //private MobileServiceTable<Campussen> mCampussen;
-
     private SharedPreferences savedValues;
 
     private List<Campussen> LijstCampussen;
@@ -68,12 +65,12 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         // Add a marker in Sydney and move the camera
         LatLng thuis = new LatLng(50.899, 5.355);
         System.out.println(thuis);
-        googleMap.addMarker(new MarkerOptions().position(thuis).title("Thuis"));
+        //googleMap.addMarker(new MarkerOptions().position(thuis).title("Thuis"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(thuis, 10));
 
         getCampussen(); // -> vanuit de sharedPreferences
 
-            }
+    }
 
 
     private void getCampussen(){

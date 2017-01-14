@@ -1,8 +1,13 @@
 package be.ucll.project2;
 
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,13 +17,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    private Context context;
+    private testDB dbhelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        context = this;
         setContentView(R.layout.activity_main);
 
         android.app.FragmentManager fragmentManager = getFragmentManager();
@@ -33,8 +45,46 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+                LayoutInflater linf = LayoutInflater.from(context);
+                final View inflator = linf.inflate(R.layout.nieuwetaakdialog, null);
+                AlertDialog.Builder alert = new AlertDialog.Builder(context);
+
+
+               /* final EditText taakTitel = (EditText) inflator.findViewById(R.id.editTextTitel);
+                final EditText taakBeschrijving =(EditText) inflator.findViewById(R.id.editTextBeschrijving);*/
+
+                AlertDialog dialog = new AlertDialog.Builder(context)
+                        .setTitle("Nieuwe taak toevoegen")
+                        .setView(R.layout.nieuwetaakdialog)
+                        .setPositiveButton("Toevoegen", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Dialog dl = (Dialog) dialog;
+
+                                EditText taakTitel = (EditText) dl.findViewById(R.id.editTextTitel);
+                                EditText taakBeschrijving =(EditText) dl.findViewById(R.id.editTextBeschrijving);
+
+                                Taak taak = new Taak();
+                                taak.setTaakTitel(taakTitel.getText().toString());
+                                taak.setTaakBeschrijving(taakBeschrijving.getText().toString());
+
+                                Calendar c = Calendar.getInstance();
+                                System.out.println("Current time => " + c.getTime());
+
+                                SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+                                String formattedDate = df.format(c.getTime());
+
+                                taak.setTaakDatum(formattedDate.toString());
+
+                                dbhelper = new testDB(context);
+                                dbhelper.insertTask(taak);
+
+                            }
+                        })
+                        .setNegativeButton("Annuleer", null)
+                        .show();
             }
         });
 
@@ -92,20 +142,34 @@ public class MainActivity extends AppCompatActivity
            fragmentManager.beginTransaction()
             .replace(R.id.content_frame, new MapFragment())
             .commit();// Handle the camera action
-        } else if (id == R.id.nav_nieuws_layout) {
+        }
+
+        else if (id == R.id.nav_nieuws_layout) {
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, new SecondFragment())
                     .commit();
-        } else if (id == R.id.nav_bussen_layout) {
+        }
+
+        else if (id == R.id.nav_bussen_layout) {
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, new BusFragment())
                     .commit();
-        } else if (id == R.id.nav_profiel_layout) {
+        }
+
+        else if (id == R.id.nav_taken_layout) {
+            fragmentManager.beginTransaction()
+                    .replace(R.id.content_frame, new TakenFragment())
+                    .commit();
+        }
+
+        else if (id == R.id.nav_profiel_layout) {
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, new ProfielFragment())
                     .commit();
 
-        } else if (id == R.id.nav_instellingen_layout) {
+        }
+
+        else if (id == R.id.nav_instellingen_layout) {
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, new InstellingenFragment())
                     .commit();
