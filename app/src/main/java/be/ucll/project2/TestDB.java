@@ -153,7 +153,6 @@ public class testDB {
 
     public long insertTask(Taak task){
         ContentValues cv = new ContentValues();
-        cv.put(TASK_ID, task.getTaakId());
         cv.put(TASK_NAME, task.getTaakTitel());
         cv.put(TASK_NOTES, task.getTaakBeschrijving());
         cv.put(TASK_DATE, task.getTaakDatum());

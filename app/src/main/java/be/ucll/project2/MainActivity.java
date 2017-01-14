@@ -49,8 +49,6 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();*/
                 LayoutInflater linf = LayoutInflater.from(context);
                 final View inflator = linf.inflate(R.layout.nieuwetaakdialog, null);
-                AlertDialog.Builder alert = new AlertDialog.Builder(context);
-
 
                /* final EditText taakTitel = (EditText) inflator.findViewById(R.id.editTextTitel);
                 final EditText taakBeschrijving =(EditText) inflator.findViewById(R.id.editTextBeschrijving);*/
