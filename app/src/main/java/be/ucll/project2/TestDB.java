@@ -93,15 +93,8 @@ public class testDB {
 
     public ArrayList<Taak> getTasks(){
         ArrayList<Taak> takenLijst = new ArrayList<Taak>();
-
         this.openReadableDB();
-        //Cursor cursor = db.query(TASK_TABLE, new String[]{TASK_ID}, null, null, null, null, null);
         Cursor cursor = db.query(TASK_TABLE, null, null, null, null, null, null);
-
-
-        //Cursor cursor = db.query(TASK_TABLE, null, where, whereArgs, null, null, null);
-
-        //ArrayList<Taak> tasks = new ArrayList<Taak>();
 
         while(cursor.moveToNext()){
             takenLijst.add(getTaskFromCursor(cursor));
@@ -113,24 +106,6 @@ public class testDB {
 
         return takenLijst;
     }
-
-    /*public Task getTask(int id){
-        String where = TASK_ID + "= ?";
-        String[] whereArgs = {Integer.toString(id)};
-
-        this.openReadableDB();
-        Cursor cursor = db.query(TASK_TABLE, null, where, whereArgs, null, null, null);
-
-        cursor.moveToFirst();
-        Task task = getTaskFromCursor(cursor);
-
-        if (cursor != null){
-            cursor.close();
-        }
-        this.closeDB();
-
-        return task;
-    }*/
 
     private static Taak getTaskFromCursor(Cursor cursor){
         if (cursor == null || cursor.getCount()==0){
@@ -162,23 +137,6 @@ public class testDB {
         this.closeDB();
 
         return rowID;
-    }
-
-    public int updateTask(Taak task){
-        ContentValues cv = new ContentValues();
-        cv.put(TASK_ID, task.getTaakId());
-        cv.put(TASK_NAME, task.getTaakTitel());
-        cv.put(TASK_NOTES, task.getTaakBeschrijving());
-        cv.put(TASK_DATE, task.getTaakDatum());
-
-        String where = TASK_ID + "= ?";
-        String[] whereArgs = {String.valueOf(task.getTaakId())};
-
-        this.openWriteableDB();
-        int rowCount = db.update(TASK_TABLE, cv, where, whereArgs);
-        this.closeDB();
-
-        return rowCount;
     }
 
     public int deleteTask(long id){

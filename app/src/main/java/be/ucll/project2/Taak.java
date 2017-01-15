@@ -6,12 +6,10 @@ package be.ucll.project2;
 
 public class Taak {
 
-
     private int taakId;
     private String taakTitel;
     private String taakBeschrijving;
     private String taakDatum;
-
 
 
     public int getTaakId(){
@@ -22,8 +20,6 @@ public class Taak {
         this.taakId = taakId;
     }
 
-
-
     public String getTaakTitel(){
         return taakTitel;
     }
@@ -32,7 +28,6 @@ public class Taak {
         this.taakTitel = titel;
     }
 
-
     public String getTaakBeschrijving(){
         return taakBeschrijving;
     }
@@ -40,7 +35,6 @@ public class Taak {
     public void setTaakBeschrijving(String beschrijving){
         this.taakBeschrijving = beschrijving;
     }
-
 
     public String getTaakDatum(){
         return taakDatum;

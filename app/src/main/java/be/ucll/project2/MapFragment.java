@@ -74,10 +74,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
 
 
     private void getCampussen(){
-        Gson gson = new Gson();
-        String json = savedValues.getString("Campussen", "");
-        Type type = new TypeToken< List < Campussen >>() {}.getType();
-        LijstCampussen = gson.fromJson(json, type);
+
+        DataHelper dh = new DataHelper(this.getActivity());
+        LijstCampussen = dh.getCampussenStorage();
+
         for (Campussen campus : LijstCampussen){
             LatLng coor = new LatLng(
                     Double.parseDouble(campus.getCoordinaatlat()),

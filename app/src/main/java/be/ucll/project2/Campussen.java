@@ -6,9 +6,8 @@ package be.ucll.project2;
 
 public class Campussen {
 
-    public Campussen(){
+    public Campussen(){   }
 
-    }
     // Item id
     @com.google.gson.annotations.SerializedName("id")
     private String mId;
@@ -73,63 +72,18 @@ public class Campussen {
     }
 
 
-
-
-
-    /**
-     * Sets the id
-     *
-     * @param text
-     *            text to set
-     */
     public final void setId(String text) {        mId = text;    }
 
-    /**
-     * Sets the naam
-     *
-     * @param text
-     *            text to set
-     */
     public final void setNaam(String text) {        mNaam = text;    }
 
-    /**
-     * Sets the naam
-     *
-     * @param text
-     *            text to set
-     */
     public final void setCoordinaatlng(String text) {        mCoordinaatlng = text;    }
 
-    /**
-     * Sets the naam
-     *
-     * @param text
-     *            text to set
-     */
     public final void setCoordinaatlat(String text) {        mCoordinaatlat = text;    }
 
-    /**
-     * Sets the naam
-     *
-     * @param text
-     *            text to set
-     */
     public final void setBushalte(String text) {        mBushalte = text;    }
 
-    /**
-     * Sets the naam
-     *
-     * @param text
-     *            text to set
-     */
     public final void setOpleidingen(String text) {        mOpleidingen = text;    }
 
-    /**
-     * Sets the naam
-     *
-     * @param text
-     *            text to set
-     */
     public final void setAdres(String text) {        mAdres = text;    }
 
 
